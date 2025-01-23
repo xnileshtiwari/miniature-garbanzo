@@ -1,0 +1,194 @@
+/* custom.css */
+/* Theme Variables (No changes needed here, but keeping for context) */
+:root {
+    --primary-color: #7C3AED;
+    --primary-light: #8B5CF6;
+    --primary-dark: #6D28D9;
+    --background: #F9FAFB;
+    --surface: #FFFFFF;
+    --text-primary: #1F2937;
+    --text-secondary: #4B5563;
+    --border-color: #E5E7EB;
+}
+
+/* Sidebar Subject Buttons Container */
+.sidebar .subject-buttons-container {
+    display: flex; /* Use flexbox for button layout */
+    flex-direction: column; /* Stack buttons vertically in sidebar */
+    gap: 0.75rem;
+    padding: 1rem 0;
+}
+
+/* Subject Buttons (General Styling - applies to all subject buttons) */
+.stButton button {
+    width: 100%; /* Take full width of container */
+    padding: 0.75rem 1rem;
+    background: var(--surface);
+    border: 1px solid var(--primary-color);
+    border-radius: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: all 0.2s ease;
+    text-align: center; /* Center text inside button */
+    display: flex; /* Enable flexbox inside button for alignment */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    min-height: 50px; /* Ensure a minimum height for all buttons */
+}
+
+.stButton button:hover {
+    background: var(--primary-light);
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* Active Subject Button Style (No change needed if current active style is fine) */
+.stButton button[data-selected="true"], /* Streamlit might add data-selected attribute */
+div[data-testid="stButton"] button.active /* Or target based on 'active' class if you add it */
+{
+    background: var(--primary-color);
+    color: white;
+}
+/* You are already setting active style in python using inline style, keep that as is */
+
+
+/* Main Title (No changes needed) */
+.main-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem;
+    background: var(--surface);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Title (No changes needed) */
+.subject-selection-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+
+/* Topics Grid */
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 1rem;
+    padding: 1rem 0;
+    grid-auto-rows: 1fr; /* Ensure all rows have the same height, distributing space evenly */
+}
+
+/* Topic Buttons */
+.topic-button {
+    background: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    text-align: center;
+    display: flex;          /* Enable flexbox for vertical centering */
+    align-items: center;     /* Vertically center text */
+    justify-content: center; /* Horizontally center text */
+    gap: 0.5rem;
+    min-height: 60px;      /* Minimum height for topic buttons */
+}
+
+.topic-button:hover {
+    background: var(--primary-light);
+    transform: translateY(-1px);
+}
+
+/* Chat Messages (No changes needed) */
+.stChatMessage {
+    background: var(--surface);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.user-message, .assistant-message {
+    line-height: 1.6;
+    color: var(--text-primary);
+}
+
+.assistant-message.streaming {
+    border-right: 2px solid var(--primary-color);
+    animation: blink 1s infinite;
+}
+
+/* Status Indicators (No cha
+
+/* Chat Input (No changes needed) */
+.stChatInput input {
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.stChatInput input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(124, 58, 237, 0.1);
+}
+
+/* Responsive Adjustments (No changes needed) */
+@media (max-width: 768px) {
+    .topics-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .main-title {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+/* Custom Status Styles (No changes needed) */
+.stStatus {
+    background-color: var(--surface);
+    color: var(--text-primary);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-weight: 500;
+}
+
+.stStatus > div {
+    display: flex;
+    align-items: center;
+}
+
+.stStatus > div > .status-icon {
+    margin-right: 0.5rem;
+}
+
+.stStatus > div > .status-text {
+    font-size: 1rem;
+}
+
+
+/* Hide default spinner (No changes needed) */
+.stStatus .spinner {
+    display: none !important;
+}
+
+/* Position custom spinner inside status (No changes needed) */
+.stStatus .custom-spinner {
+    display: inline-block;
+    margin-right: 1rem;
+}

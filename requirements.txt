@@ -1,0 +1,5 @@
+
+st-gsheets-connection
+streamlit
+google-generativeai
+pytz
