@@ -3,6 +3,19 @@ from generative_model import get_physics_answers, get_chemistry_answers, get_mat
 import streamlit as st
 import os
 
+
+st.set_page_config(
+    page_title="69",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'About': "Special thanks to Hari Singh for encouraging me to create this app."
+    }
+)
+
+
+
 def load_css():
     css_file = os.path.join(os.path.dirname(__file__), "custom.css")
     try:
