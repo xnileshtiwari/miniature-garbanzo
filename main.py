@@ -16,6 +16,15 @@ st.set_page_config(
 
 
 
+hide_menu = """
+<style>
+#MainMenu {visibility: hidden;}
+</style>
+"""
+st.markdown(hide_menu, unsafe_allow_html=True)
+
+
+
 def load_css():
     css_file = os.path.join(os.path.dirname(__file__), "custom.css")
     try:
