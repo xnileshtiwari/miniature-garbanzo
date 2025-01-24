@@ -4,15 +4,6 @@ import streamlit as st
 import os
 
 
-# Hide Streamlit's default menu buttons
-hide_menu = """
-<style>
-#MainMenu {visibility: hidden;}
-</style>
-"""
-st.markdown(hide_menu, unsafe_allow_html=True)
-
-
 st.set_page_config(
     page_title="69",
     page_icon="🧊",
@@ -95,6 +86,7 @@ def main():
     with st.sidebar:
         st.markdown('<div class="subject-selection-title">Choose Your Subject</div>', unsafe_allow_html=True)
         st.markdown('<div class="subject-buttons-container">', unsafe_allow_html=True)
+        
 
         
         # Create three columns for subject buttons
