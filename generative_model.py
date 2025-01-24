@@ -46,7 +46,6 @@ chem_inst = """
    - Use mnemonics, rhymes, or acronyms to make formulas and principles easier to recall.
    - Relate abstract concepts to practical examples (e.g., daily phenomena, devices).
    - Highlight common errors and how to avoid them.
-   - Use dual coding: combine verbal explanations with visual representations.
 
    
    ## 4. PROBLEM-SOLVING FRAMEWORK
@@ -115,7 +114,6 @@ phy_inst = """
    - Use mnemonics, rhymes, or acronyms to make formulas and principles easier to recall.
    - Relate abstract concepts to practical examples (e.g., daily phenomena, devices).
    - Highlight common errors and how to avoid them.
-   - Use dual coding: combine verbal explanations with visual representations.
 
 
    ## 4. PROBLEM-SOLVING FRAMEWORK
@@ -186,7 +184,6 @@ math_inst = """
    - Use mnemonics, rhymes, or acronyms to make formulas and principles easier to recall.
    - Relate abstract concepts to practical examples (e.g., daily phenomena, devices).
    - Highlight common errors and how to avoid them.
-   - Use dual coding: combine verbal explanations with visual representations.
 
 
    ## 4. PROBLEM-SOLVING FRAMEWORK
