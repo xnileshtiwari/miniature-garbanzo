@@ -4,6 +4,15 @@ import streamlit as st
 import os
 
 
+# Hide Streamlit's default menu buttons
+hide_menu = """
+<style>
+#MainMenu {visibility: hidden;}
+</style>
+"""
+st.markdown(hide_menu, unsafe_allow_html=True)
+
+
 st.set_page_config(
     page_title="69",
     page_icon="🧊",
